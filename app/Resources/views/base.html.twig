@@ -33,15 +33,34 @@
 				</tr>
 			</table>
 		{% endblock %}
-		<div style="padding-left:10%;" id="navbar" class="navbar">
-			<span><a href="#">Главная</a></span>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <span class="span2">
+                        <div class="row-fluid"><span class="span1" style="border: #000 solid 1px; width: 25px; height: 25px; text-align: center; background-color: #a70330;">Т</span></div>
+                        <div class="row-fluid">
+                            <span class="span1" style="border: #000 solid 1px; width: 25px; height: 25px; text-align: center; background-color: grey;">С</span>
+                            <span class="span2"><b><span style="color:#a70330;">Тепло</span><span style="color: gray;">Строй</span>Монтаж</b></span>
+                        </div>
+                        <div class="row-fluid"><span class="span1" style="border: #000 solid 1px; width: 25px; height: 25px; text-align: center;">М</span></div>
+                    </span>
+                    <span class="span1"></span>
+                    <span class="span10">
+                        <span><a href="#">Главная</a></span>
 			<span><a href="#">Партнёры</a></span>
 			<span><a href="#">Каталог</a></span>
 			<span><a href="#">Контакты</a></span>
 			<span><a href="#">О компании</a></span>
 			<span><a href="#">Обратная связь</a></span>
-		</div>
-        {% block body %}{% endblock %}
+                    </span>
+                    <span class="span1"></span>
+                </div>
+            </div>
+            <div class="row-fluid"><span class="span3"></span></div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
 		{% block footer %}
 			<table width="760" border="0" cellspacing="0" cellpadding="0">
 				<tr>
