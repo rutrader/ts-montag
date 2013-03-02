@@ -1,0 +1,11 @@
+parameters:
+#    aggregate.example.class: Ailove\AggregateBundle\Example
+
+services:
+#   tsm_catalog.catalog:
+#      class: Tsm\CatalogBunle\Admin\CatalogAdmin
+#      calls:
+#          - [ setTranslationDomain, [ 'CatalogBundle' ] ]
+#      tags:
+#        - { name: sonata.admin, manager_type: orm, group: catalog, label: catalog }
+#      arguments: [null, Tsm\CatalogBunle\Entity\Catalog, SonataAdminBundle:CRUD]

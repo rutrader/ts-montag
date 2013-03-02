@@ -1,0 +1,60 @@
+<?php
+
+namespace Tsm\CatalogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tsm\CatalogBundle\Entity\Catalog
+ *
+ * @ORM\Table(name="catalog")
+ * @ORM\Entity
+ */
+class Catalog
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string $name
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string $desc
+     *
+     * @ORM\Column(name="desc", type="string", length=1024, nullable=false)
+     */
+    private $desc;
+
+    /**
+     * @var integer $price
+     *
+     * @ORM\Column(name="price", type="integer", nullable=false)
+     */
+    private $price;
+
+    /**
+     * @var integer $category
+     *
+     * @ORM\Column(name="category", type="integer", nullable=false)
+     */
+    private $category;
+
+    /**
+     * @var integer $parent
+     *
+     * @ORM\Column(name="parent", type="integer", nullable=false)
+     */
+    private $parent;
+
+
+}

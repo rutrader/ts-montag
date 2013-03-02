@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+			<link href="{{ asset('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+			<!-- link href="{{asset('Font-Awesome/css/font-awesome.min.css')}}" rel="stylesheet" -->
+		{% endblock %}
+			<script type="text/javascript" src="{{ asset('js/jquery-1.8.3.min.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+		{% block header %}
+			<table width="860" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<table width="760" border="0" cellspacing="0" cellpadding="0">
+							<tr height="60">
+								<td width="152" height="60"><!-- #BeginEditable "Region2" --><img src="(EmptyReference!)" alt="Logo 152x60" style="height:50px; width:300px;" border="0" /><!-- #EndEditable --></td>
+								<td width="59" height="60"></td>
+								<td width="486" height="60"><!-- #BeginEditable "Region" --><img src="(EmptyReference!)" alt="Banner Ad 468x60" style="height:50px; width:486px;" border="0" /><!-- #EndEditable --></td>
+								<td width="63" height="60"></td>
+							</tr>
+						</table>
+						<table width="760" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="760" height="10"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		{% endblock %}
+		<div style="padding-left:10%;" id="navbar" class="navbar">
+			<span><a href="#">Главная</a></span>
+			<span><a href="#">Партнёры</a></span>
+			<span><a href="#">Каталог</a></span>
+			<span><a href="#">Контакты</a></span>
+			<span><a href="#">О компании</a></span>
+			<span><a href="#">Обратная связь</a></span>
+		</div>
+        {% block body %}{% endblock %}
+		{% block footer %}
+			<table width="760" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<table width="760" border="0" cellspacing="0" cellpadding="0">
+							<tr height="60">
+								<td width="152" height="60"><!-- #BeginEditable "Region2" --><img src="(EmptyReference!)" alt="Logo 152x60" style="height:50px; width:300px;" border="0" /><!-- #EndEditable --></td>
+								<td width="59" height="60"></td>
+								<td width="486" height="60"><!-- #BeginEditable "Region" --><img src="(EmptyReference!)" alt="Banner Ad 468x60" style="height:50px; width:486px;" border="0" /><!-- #EndEditable --></td>
+								<td width="63" height="60"></td>
+							</tr>
+						</table>
+						<table width="760" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="760" height="10"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
