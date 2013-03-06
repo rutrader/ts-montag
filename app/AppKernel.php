@@ -28,6 +28,10 @@ class AppKernel extends Kernel
             new Sonata\jQueryBundle\SonatajQueryBundle(),
 			//Doctrine
 			new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+			//FOS
+	//		new FOS\RestBundle\FOSRestBundle(),
+			//JMS
+//			new JMS\SerializerBundle\JMSSerializerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
