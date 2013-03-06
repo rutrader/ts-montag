@@ -1,0 +1,27 @@
+/* 
+    Document   : main
+    Created on : Mar 7, 2013, 1:22:14 AM
+    Author     : rutrader
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background-color: #bbbbbb;
+}
+
+.logo-name {
+    background-color: #a70330;
+    color: #FFFFFF;
+/*    margin-left: -20px !important;
+    width: 200px !important;*/
+    text-align: center;
+}
+#main_container {
+    width: 1250px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 10px auto 0;
+    background-color: #FFFFFF;
+}
+

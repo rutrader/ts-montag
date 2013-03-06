@@ -11,6 +11,22 @@ _sonata_admin:
     resource: .
     type: sonata_admin
     prefix: /admin
+
+_static_contacts:
+    defaults: { _controller: TsmCatalogBundle:StaticPageRest:getContacts }
+    pattern: /contacts
+
+_static_partners:
+    defaults: { _controller: TsmCatalogBundle:StaticPageRest:partners }
+    pattern: /partners
+
+_static_about:
+    defaults: { _controller: TsmCatalogBunlde:StaticPageRest:about }
+    pattern:  /about
+
+_static_feedback:
+    defaults: { _controller: TsmCatalogBunlde:StaticPageRest:feedback }
+    pattern:  /feedback
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
