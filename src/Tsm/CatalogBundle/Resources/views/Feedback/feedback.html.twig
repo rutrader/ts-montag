@@ -1,6 +1,6 @@
-A feedback request was made by {{ feedback.fullname }}( {{ feedback.companyName }} ) at {{ "now" | date("Y-m-d H:i") }}.
-
-Reply-To: {{ feedback.email }}
-{#Subject: {{ feedback.companyName }}#}
-Body:
+Название компании: {{ feedback.companyName }}
+ФИО контактного лица: {{ feedback.fullname }}
+Телефон:    {{ feedback.phone }}
+Емайл:      {{ feedback.email }}
+Вопрос или заявка:
 {{ feedback.comment }}

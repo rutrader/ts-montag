@@ -41,7 +41,7 @@ class FeedbackController extends Controller {
                 $oEntity->persist( $oFeedBack );
                 $oEntity->flush();
                 
-                // Отправляем на email
+                // Отправляем на admin-email
                 $message = \Swift_Message::newInstance()
                         ->setSubject( "Новое обращение на сайте ts-montag.ru" )
                         ->setFrom( $oData->getEmail() )
@@ -49,6 +49,16 @@ class FeedbackController extends Controller {
                         ->setBody( $this->renderView('TsmCatalogBundle:Feedback:feedback.html.twig', array( 'feedback' => $oFeedBack ) ) )
                         ;
                 $this->get('mailer')->send($message);
+
+                // Отправляем клиенту
+                $message = \Swift_Message::newInstance()
+                        ->setSubject( "Ваше обращение в компанию  ООО \"ТеплоСтройМонтаж\" зарегистрировано" )
+                        ->setFrom( "ts_montag@mail.ru" )
+                        ->setTo( $oData->getEmail() )
+                        ->setBody( $this->renderView( "TsmCatalogBundle::Feedback:feedback_user.html.twig", array( 'feedback' => $oFeedBack ) ) )
+                        ;
+                $this->get( 'mailer' )->send( $message );
+                
                 $this->get('session')->setFlash('feedback-notice', 'Спасибо за ваше обращение. Наши специалисты свяжутся с вами в ближайшее время');
                 
                 return $this->redirect( $this->generateUrl( "_static_feedback" ) );
