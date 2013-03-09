@@ -25,7 +25,7 @@ _static_about:
     pattern:  /about
 
 _static_feedback:
-    defaults: { _controller: TsmCatalogBunlde:StaticPageRest:feedback }
+    defaults: { _controller: TsmCatalogBundle:StaticPageRest:feedback }
     pattern:  /feedback
 # Internal routing configuration to handle ESI
 #_internal:
