@@ -1,0 +1,6 @@
+A feedback request was made by {{ feedback.fullname }}( {{ feedback.companyName }} ) at {{ "now" | date("Y-m-d H:i") }}.
+
+Reply-To: {{ feedback.email }}
+{#Subject: {{ feedback.companyName }}#}
+Body:
+{{ feedback.comment }}

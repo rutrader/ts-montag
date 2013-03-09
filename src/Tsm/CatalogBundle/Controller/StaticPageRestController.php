@@ -1,5 +1,4 @@
 <?php
-
 namespace Tsm\CatalogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

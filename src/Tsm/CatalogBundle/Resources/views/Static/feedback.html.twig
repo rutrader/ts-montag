@@ -1,5 +1,22 @@
 {# empty Twig template #}
 {% extends '::base.html.twig' %}
-<p>
-    <div class="warning">This is Feedback page</div>
-</p>
+
+{% block body %}
+<span class="span2"></span>
+<span class="span10">
+    {% if app.session.hasFlash('feedback-notice') %}
+        <div class="alert alert-success">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ app.session.flash('feedback-notice') }}
+        </div>
+    {% endif %}
+
+    <form action="{{ path('_static_feedback') }}" method="post" {{ form_enctype(form) }} class="contact">
+        {{ form_errors(form) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" value="Submit" />
+    </form>
+</span>
+{% endblock %}

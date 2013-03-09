@@ -1,0 +1,38 @@
+Feedback:
+    type: entity
+    table: feedback
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        companyName:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: company_name
+        fullname:
+            type: string
+            length: 512
+            fixed: false
+            nullable: false
+        phone:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+        email:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+        comment:
+            type: string
+            length: 1024
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

@@ -7,8 +7,8 @@ parameters:
     database_password: null
     mailer_transport: smtp
     mailer_host: localhost
-    mailer_user: null
-    mailer_password: null
+    mailer_user: ts-montag
+    mailer_password: ts-montag
     locale: en
     secret: 0ffd00a46f335515afa548f8fbf33c4b0a9278b1
     database_path: null
