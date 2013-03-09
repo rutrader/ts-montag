@@ -27,9 +27,9 @@ class CategoryAdmin extends Admin {
     protected function configureShowField(ShowMapper $showMapper)
     {
         $showMapper
-                ->add('id', null, array('label' => 'Идентификатор'))
-                ->add('name', null, array( 'label' => 'Имя' ) )
-                ->add( 'parent', null, array( 'label' => 'Price' ) )
+                ->add('id', null, array('label' => 'ID'))
+                ->add('name', null, array( 'label' => 'Название' ) )
+                ->add( 'parent', null, array( 'label' => 'Родитель?' ) )
                 ;
     }
 
@@ -43,8 +43,8 @@ class CategoryAdmin extends Admin {
     {
         $listMapper
                 ->addIdentifier('id')
-                ->addIdentifier('name', null, array('label' => 'Заголовок'))
-                ->add( 'parent', null, array( 'label' => 'Parent' ) )
+                ->addIdentifier('name', null, array('label' => 'Название'))
+                ->add( 'parent', null, array( 'label' => 'Родитель?' ) )
                 ;
     }
 
@@ -56,8 +56,8 @@ class CategoryAdmin extends Admin {
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-                ->add('name', null, array('label' => 'Заголовок'))
-                ->add('parent', null, array('label' => 'Анонс'))
+                ->add('name', null, array('label' => 'Название'))
+                ->add('parent', null, array('label' => 'Родитель?'))
                  ;
     }
 
