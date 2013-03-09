@@ -66,3 +66,5 @@ sonata_block:
 
         sonata.block.service.text:
         sonata.block.service.rss:
+
+gregwar_captcha: ~

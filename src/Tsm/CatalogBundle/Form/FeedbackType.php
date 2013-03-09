@@ -18,6 +18,8 @@ class FeedbackType extends AbstractType {
                 ->add( 'phone', 'text', array( 'label' => 'Телефон', 'required' => true ) )
                 ->add( 'email', 'email' )
                 ->add( 'comment', 'textarea' );
+         $builder->add('captcha', 'captcha', array( 'invalid_message' => 'Введите код как на картинке', 'distortion' => false, 'gc_freq' => 1 ) );
+    
         //parent::buildForm($builder, $options);
     }
 
