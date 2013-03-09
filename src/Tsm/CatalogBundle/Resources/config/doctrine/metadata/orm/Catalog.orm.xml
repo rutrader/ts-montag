@@ -5,7 +5,7 @@
       <generator strategy="IDENTITY"/>
     </id>
     <field name="name" type="string" column="name" length="100" nullable="false"/>
-    <field name="desc" type="string" column="desc" length="1024" nullable="false"/>
+    <field name="descr" type="string" column="descr" length="1024" nullable="false"/>
     <field name="price" type="integer" column="price" nullable="false"/>
     <field name="category" type="integer" column="category" nullable="false"/>
     <field name="parent" type="integer" column="parent" nullable="false"/>

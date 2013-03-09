@@ -35,6 +35,22 @@ class CatalogController extends Controller
         return $this->render( "TsmCatalogBundle:Catalog:show.html.twig", array( "product" => $product ) );
     }
 
+    /**
+     * @Route( "/services/list", name="services" )
+     *
+     * @return Response
+     * @throws \Exception
+     */
+    public function listAction() {
+        $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            throw new \Exception( "Nothing..." );
+        }
+
+        return $this->render( "TsmCatalogBundle:Catalog:list.html.twig", array( "product" => $product ) );
+    }
+
     public function newAction() {
         $oProduct    = new Catalog();
 

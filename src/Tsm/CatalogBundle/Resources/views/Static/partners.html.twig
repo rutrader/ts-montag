@@ -1,5 +1,56 @@
 {# empty Twig template #}
 {% extends '::base.html.twig' %}
-<p>
-    <div class="warning">This is Partners page</div>
-</p>
+{% block body %}
+    <span class="span2"></span>
+    <span class="span10">
+        <div class="warning">This is Partners page</div>
+        <div class="row show-grid" >
+            <span class="span2">
+                <a href="http://transaero.ru/" target="_blank"><img src="{{ asset( 'uploads/partners/transaero.jpg' ) }}" ></a>
+            </span>
+            <span class="span10"> Description </span>
+        </div>
+        <div class="row">
+            <span class="span2">
+                <a href="http://www.mosreactiv.ru/" target="_blank"><img src="{{ asset( 'uploads/partners/chemical.gif' ) }}" ></a>
+            </span>
+            <span class="span10">ЗАО «Мосреактив» — это динамично развивающаяся производственно-сбытовая компания, основанная в 1957 году. Сегодня ЗАО «Мосреактив» располагает многофункциональным комплексом, включающим таможенный склад, производственные и фасовочные цеха, аналитическую лабораторию, автотранспортное хозяйство.</span>
+        </div>
+        <div class="row">
+            <span class="span2">
+                <a href="http://circus.ru/" target="_blank"><img src="{{ asset( 'uploads/partners/circus.gif' ) }}" ></a>
+            </span>
+            <span class="span10">Description</span>
+        </div>
+        <div class="row">
+            <span class="span2">
+                <a href="http://www.pyaterochka.ru/" target="_blank"><img src="{{ asset( 'uploads/partners/five.gif' ) }}" ></a>
+            </span>
+            <span class="span10">Description</span>
+        </div>
+        <div class="row">
+            <span class="span2">
+                <a href="http://www.mosinzhproekt.ru/" target="_blank"><img src="{{ asset( 'uploads/partners/mosinjproekt.gif' ) }}" ></a>
+            </span>
+            <span class="span10">Description</span>
+        </div>
+        <div class="row">
+            <span class="span2">
+                <a href="http://www.neurology.ru/" target="_blank"><img src="{{ asset( 'uploads/partners/nevrologiya.gif' ) }}" width="435" height="70" ></a>
+            </span>
+            <span class="span10">Научный центр неврологии РАМН - крупнейшая неврологическая клиника России, основной научно-исследовательский и лечебно-диагностический центр нашей страны, способный решать любые задачи в области неврологии. </span>
+        </div>
+        <div class="row">
+            <span class="span2">
+                <a href="http://www.madip.ru/" target="_blanl"><img src="{{ asset( 'uploads/partners/avtodor.jpg' ) }}" ></a>
+            </span>
+            <span class="span10">Компания "Мосавтодор и Партнеры" была основа в 1991г. Создание компании стало необходимым и возможным вследствие разделения функций государственного заказчика и подрядчика дорожных работ, раннее возложенных на «Мосавтодор».</span>
+        </div>
+        <div class="row">
+            <span class="span2">
+                <a href="http://www.moesk.ru/" target="_blank"><img src="{{ asset( 'uploads/partners/moes.png' ) }}" ></a>
+            </span>
+            <span class="span10">ОАО «МОЭСК» принимает электроэнергию в сеть от генерирующих компаний – субъектов оптового и розничного рынков, из сети Единой национальной (общероссийской) электрической сети (ЕНЭС) и от сетей, расположенных в смежных субъектах РФ. Затем через собственные сети передает электроэнергию конечным потребителям, в смежные сети (муниципальные унитарные предприятия (МУП), оптовым потребителям-перепродавцам (ОПП), в территориальные сетевые организации (ТСО).</span>
+        </div>
+    </span>
+{% endblock %}

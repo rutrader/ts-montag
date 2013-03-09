@@ -31,7 +31,7 @@ class CatalogAdmin extends Admin {
                 ->add('name', null, array( 'label' => 'Имя' ) )
                 ->add( 'price', null, array( 'label' => 'Price' ) )
                 ->add( 'descr', null, array( 'label' => 'Описание' ) )
-                ->add( 'category', null, array( 'label' => 'Категория' ) )
+                //->add( 'category', null, array( 'label' => 'Категория' ) )
                 ;
     }
 
@@ -48,7 +48,7 @@ class CatalogAdmin extends Admin {
                 ->addIdentifier('name', null, array('label' => 'Заголовок'))
                 ->add('price', null, array('label' => 'Дата публикации'))
                 ->add('descr', null, array('label' => 'Описание'))
-                ->add( 'category', null, array( 'label' => 'Category' ) )
+                //->add( 'category', 'orm_many_to_one' /*array( 'template' => 'SonataDoctrineORMAdminBundle:CRUD:list_orm_many_to_one.html.twig')*/ )
             ;
     }
 

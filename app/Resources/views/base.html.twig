@@ -28,12 +28,12 @@
 </span>
                     <span class="span1"></span>
                     <span class="span10" style="text-align: center;">
-                        <span><a href="#">Главная</a></span>
-			<span><a href="#">Партнёры</a></span>
-			<span><a href="#">Каталог</a></span>
-			<span><a href="/contacts">Контакты</a></span>
-			<span><a href="#">О компании</a></span>
-			<span><a href="#">Обратная связь</a></span>
+                        <span><a href="/">Главная</a></span>
+			<span><a href="{{ path ('_static_partners') }}">Партнёры</a></span>
+			<span><a href="{{ path( 'services' ) }}">Каталог</a></span>
+			<span><a href="{{ path( '_static_contacts' ) }}">Контакты</a></span>
+			<span><a href="{{ path( '_static_about' ) }}">О компании</a></span>
+			<span><a href="{{ path( '_static_feedback' ) }}">Обратная связь</a></span>
                     </span>
                     <span class="span1"></span>
                 </div>

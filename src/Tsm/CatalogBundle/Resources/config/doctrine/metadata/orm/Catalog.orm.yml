@@ -14,7 +14,7 @@ Catalog:
             length: 100
             fixed: false
             nullable: false
-        desc:
+        descr:
             type: string
             length: 1024
             fixed: false
