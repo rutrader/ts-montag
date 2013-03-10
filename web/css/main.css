@@ -13,8 +13,7 @@ body {
 .logo-name {
     background-color: #a70330;
     color: #FFFFFF;
-/*    margin-left: -20px !important;
-    width: 200px !important;*/
+    border-radius: 15px 15px 15px 15px;
     text-align: center;
 }
 #main_container {
@@ -43,4 +42,10 @@ form.contact ul li { color: #ff0000; margin-bottom: 5px; }
 #Contact_captcha {
     width: 350px    !important;
     margin-left:    20px    !important;
+}
+
+#logo {
+    background: url("/img/banner.png") repeat scroll 0px center transparent;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #ccc;
 }
