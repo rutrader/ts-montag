@@ -11,7 +11,7 @@ use Tsm\CatalogBundle\Entity\Catalog;
 class CatalogController extends Controller
 {
     /**
-     * Route("/")
+     * @Route("/", name="main")
      * @Template()
      */
     public function indexAction()
