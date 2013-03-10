@@ -21,7 +21,7 @@ _static_partners:
     pattern: /partners
 
 _static_about:
-    defaults: { _controller: TsmCatalogBunlde:StaticPageRest:about }
+    defaults: { _controller: TsmCatalogBundle:StaticPageRest:about }
     pattern:  /about
 
 _static_feedback:

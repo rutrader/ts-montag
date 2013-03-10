@@ -22,6 +22,7 @@ body {
     padding-bottom: 20px;
     margin: 10px auto 0;
     background-color: #FFFFFF;
+    border-radius: 15px;
 }
 
 .show-grid {
