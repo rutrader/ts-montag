@@ -8,3 +8,8 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ app.php [QSA,L]
 </IfModule>
+
+AuthType Basic
+AuthName "Restricted area"
+AuthUserFile /home/ts-montag/data/ts-montag/web/.htpasswd
+Require valid-user
