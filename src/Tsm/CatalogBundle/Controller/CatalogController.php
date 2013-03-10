@@ -48,7 +48,7 @@ class CatalogController extends Controller
             throw new \Exception( "Nothing..." );
         }
 
-        return $this->render( "TsmCatalogBundle:Catalog:list.html.twig", array( "product" => $product ) );
+        return $this->render( "TsmCatalogBundle:Catalog:list.html.twig", array( "products" => $product ) );
     }
 
     public function newAction() {
