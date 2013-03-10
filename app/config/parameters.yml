@@ -3,8 +3,8 @@ parameters:
     database_host: localhost
     database_port: null
     database_name: tsm
-    database_user: root
-    database_password: null
+    database_user: tsmontag
+    database_password: tsmontag
     mailer_transport: smtp
     mailer_host: localhost
     mailer_user: ts-montag
