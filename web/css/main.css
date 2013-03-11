@@ -13,7 +13,7 @@ body {
 .logo-name {
     background-color: #a70330;
     color: #FFFFFF;
-    border-radius: 15px 15px 15px 15px;
+/*    border-radius: 15px 15px 15px 15px;*/
     text-align: center;
 }
 #main_container {
@@ -47,6 +47,6 @@ form.contact ul li { color: #ff0000; margin-bottom: 5px; }
 
 #logo {
     background: url("/img/banner.png") repeat scroll 0px center transparent;
-    border-radius: 15px 15px 15px 15px;
+    /*border-radius: 15px 15px 15px 15px;*/
     background-color: #ccc;
 }
