@@ -21,7 +21,7 @@ class Builder extends ContainerAware {
         $menu->addChild('catalog', array( 'route' => 'services', 'label' => 'Услуги' ) );
         $menu->addChild('contacts', array( 'route' => '_static_contacts', 'label' => 'Контакты' ) );
         $menu->addChild('about', array( 'route' => '_static_about', 'label' => 'О компании' ) );
-        $menu->addChild('feedback', array( 'route' => '_static_feedback', 'label' => 'Обратная связь' ) );
+        $menu->addChild('feedback', array( 'route' => '_static_feedback', 'label' => 'Отправить заявку' ) );
         // ... add more children
 
         return $menu;
