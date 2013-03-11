@@ -22,6 +22,16 @@ class FeedbackController extends Controller {
         $oFeedBack = new Feedback();
         $oEntity = $this->getDoctrine()->getEntityManager();
 
+        $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            $arSerivces = array();
+        }
+
+        foreach( $product as $key => $val ) {
+            $arSerivces[$val->getCategory()->getName()][] = $val;
+        }
+
         $form   = $this->createForm( new FeedbackType(), $oFeedBack );
         $request = $this->getRequest();
 
@@ -64,7 +74,7 @@ class FeedbackController extends Controller {
                 return $this->redirect( $this->generateUrl( "_static_feedback" ) );
             }
         }
-        return $this->render( 'TsmCatalogBundle:Static:feedback.html.twig', array( 'form' => $form->createView() ) );
+        return $this->render( 'TsmCatalogBundle:Static:feedback.html.twig', array( 'form' => $form->createView(), 'products' => $arSerivces ) );
     }
 }
 

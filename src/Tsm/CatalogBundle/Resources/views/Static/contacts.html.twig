@@ -1,10 +1,10 @@
 {# empty Twig template #}
 {% extends '::base.html.twig' %}
 {% block title %}Контакты{% endblock %}
+{% block page_title %}Контакты{% endblock %}
 {% block body %}
-<span class="span2"></span>
-<span class="span10">
-    <h1 id="title">Контакты</h1>
+{% include '::navleft.html.twig' %}
+<span class="span9">
 <p>
     ООО «ТеплоСтройМонтаж» работает в сфере теплоэнергетики с января 2011 года.
     Молодая, но быстро развивающаяся компания.

@@ -6,15 +6,29 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 
+use Tsm\CatalogBundle\Entity\Catalog;
+
 class StaticPageRestController extends Controller
 {
+    private $arSerivces;
+
     /**
      * Route("/contacts", name = "contacts")
      * @Template()
      */
     public function getContactsAction()
     {
-        return $this->render( 'TsmCatalogBundle:Static:contacts.html.twig' );
+                $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            $this->arSerivces = array();
+        }
+
+        foreach( $product as $key => $val ) {
+            $this->arSerivces[$val->getCategory()->getName()][] = $val;
+        }
+
+        return $this->render( 'TsmCatalogBundle:Static:contacts.html.twig', array( 'products' => $this->arSerivces ) );
     }
 
     /**
@@ -23,7 +37,17 @@ class StaticPageRestController extends Controller
      */
     public function partnersAction()
     {
-        return $this->render( 'TsmCatalogBundle:Static:partners.html.twig' );
+                $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            $this->arSerivces = array();
+        }
+
+        foreach( $product as $key => $val ) {
+            $this->arSerivces[$val->getCategory()->getName()][] = $val;
+        }
+
+        return $this->render( 'TsmCatalogBundle:Static:partners.html.twig', array( 'products' => $this->arSerivces ) );
     }
 
     /**
@@ -32,7 +56,17 @@ class StaticPageRestController extends Controller
      */
     public function aboutAction()
     {
-        return $this->render( 'TsmCatalogBundle:Static:about.html.twig' );
+                $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            $this->arSerivces = array();
+        }
+
+        foreach( $product as $key => $val ) {
+            $this->arSerivces[$val->getCategory()->getName()][] = $val;
+        }
+
+        return $this->render( 'TsmCatalogBundle:Static:about.html.twig', array( 'products' => $this->arSerivces ) );
     }
 
     /**
@@ -41,7 +75,16 @@ class StaticPageRestController extends Controller
      */
     public function feedbackAction()
     {
-        return $this->render( 'TsmCatalogBundle:Static:feedback.html.twig' );
+                $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            $this->arSerivces = array();
+        }
+
+        foreach( $product as $key => $val ) {
+            $this->arSerivces[$val->getCategory()->getName()][] = $val;
+        }
+        return $this->render( 'TsmCatalogBundle:Static:feedback.html.twig', array( 'products' => $this->arSerivces ) );
     }
 
 }

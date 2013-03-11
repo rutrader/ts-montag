@@ -16,27 +16,31 @@
     <div id="main_container">
     {% block header %}{% endblock %}
             <div class="container-fluid">
-                <div class="row-fluid" id="logo">
+                <div class="row-fluid">
                     <span class="span2 logo-name">
                         <div class="row-fluid">
                             <span class="span1"></span>
                         </div>
-                        <div class="row-fluid"><h1>TCM</h1></div>
+                            <div class="row-fluid"><h1 style="margin-top: 0px; margin-bottom: 0px;">TCM</h1>ТеплоСтройМонтаж</div>
                         <div class="row-fluid">
                             <span class="span1"></span>
                         </div>
                     </span>
-                    <span class="span10" style="text-align: center; color: rgb(167, 3, 48); margin-top: 15px;">
+                    <span class="span10" style="text-align: right; color: rgb(167, 3, 48);" id="logo">
                         <span style="padding-right: 0px; padding-left: 145px;">8(495)</span>
                         <span style="font-weight: bold; color: rgb(167, 3, 48); font-size: 20px; padding-left: 0px; border-bottom-width: 0px; margin-bottom: 0px; padding-bottom: 0px;">915-56-87</span><br/>
-                        <br />2-ой Гончарный пер., д. 6 , корп. 4, офис 307
+                        <br />Москва, 2-й Гончарный переулок, д. 6к4, оф.307
+                        <br />
+                        <input type="text" style="margin-top: 30px;"/><input type="submit" value="Поиск" style="margin-top: 18px; height: 32px;">
                     </span>
                 </div>
             </div>
             <div class="row-fluid menu">
                 <span class="span2"></span>
-                <span class="span10">{{ knp_menu_render( 'TsmCatalogBundle:Builder:mainMenu', {'template' : 'TsmCatalogBundle:Menu:knp_menu.html.twig' } ) }}</span>
+                <span class="span8">{{ knp_menu_render( 'TsmCatalogBundle:Builder:mainMenu', {'template' : 'TsmCatalogBundle:Menu:knp_menu.html.twig' } ) }}</span>
             </div>
+
+        <h1 id="title">{% block page_title %}{% endblock %}</h1>
         <div class="container-fluid">
             <div class="row-fluid">
                 {% block body %}{% endblock %}

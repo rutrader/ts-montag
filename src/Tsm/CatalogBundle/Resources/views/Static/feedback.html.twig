@@ -1,10 +1,11 @@
 {# empty Twig template #}
 {% extends '::base.html.twig' %}
-{% block title %}Обратная связь{% endblock %}
+{% block title %}Отправить заявку{% endblock %}
+{% block page_title %}Отправить заявку{% endblock %}
 {% block body %}
-<span class="span2"></span>
-<span class="span10">
-    <h1 id="title">Отправить заявку</h1>
+{% include '::navleft.html.twig' %}
+<span class="span9">
+    
     {% if app.session.hasFlash('feedback-notice') %}
         <div class="alert alert-success">
              <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -19,7 +20,7 @@
 {#        <img src="{{ form.captcha_code }}" title="captcha" width="{{ captcha_width }}" height="{{ captcha_height }}" />#}
         <div>
             <label></label>
-            <input type="submit" value="Отправить заявку" />
+            <input type="submit" value="Отправить"  style="margin-left: 425px;"/>
         </div>
     </form>
 </span>

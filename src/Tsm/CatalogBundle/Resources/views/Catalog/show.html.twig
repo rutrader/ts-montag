@@ -1,7 +1,10 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-    {{ product.name }}
-    {{ product.price }}
-    {{ product.descr }}
-    {{ product.category.name }}
+{% include '::navleft.html.twig' %}
+<span class="span9">
+    {{ service.name }}
+    {{ service.price }}
+    {{ service.descr }}
+    {{ service.category.name }}
+</span>
 {% endblock %}
