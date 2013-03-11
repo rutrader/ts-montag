@@ -16,7 +16,7 @@ class CatalogController extends Controller
      */
     public function indexAction()
     {
-        /*
+        
         $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
 
         if( !$product ) {
@@ -27,9 +27,9 @@ class CatalogController extends Controller
             $arReturn[$val->getCategory()->getName()][] = $val;
         }
         return $this->render("TsmCatalogBundle:Catalog:index.html.twig", array( 'products' => $arReturn ) );
-         *
-         */
-        return $this->forward("TsmCatalogBundle:Catalog:show", array( 'id' => 3 ) );
+         
+         
+        //return $this->forward("TsmCatalogBundle:Catalog:show", array( 'id' => 3 ) );
     }
 
     /**
