@@ -22,7 +22,6 @@ class CatalogController extends Controller
         if( !$product ) {
             throw new \Exception( "Nothing..." );
         }
-//var_dump( $product[2]->getCategory()->getName() );
         foreach( $product as $key => $val ) {
             $arReturn[$val->getCategory()->getName()][] = $val;
         }

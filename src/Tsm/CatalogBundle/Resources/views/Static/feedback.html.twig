@@ -4,7 +4,7 @@
 {% block page_title %}Отправить заявку{% endblock %}
 {% block body %}
 {% include '::navleft.html.twig' %}
-<span class="span9">
+<span class="span8" style="margin-left: 17px;">
     
     {% if app.session.hasFlash('feedback-notice') %}
         <div class="alert alert-success">
@@ -20,7 +20,7 @@
 {#        <img src="{{ form.captcha_code }}" title="captcha" width="{{ captcha_width }}" height="{{ captcha_height }}" />#}
         <div>
             <label></label>
-            <input type="submit" value="Отправить"  style="margin-left: 425px;"/>
+            <input type="submit" value="Отправить"  style="margin-left: 325px;"/>
         </div>
     </form>
 </span>

@@ -32,18 +32,18 @@ body {
 
 form.contact { font-size: 16px; }
 form.contact div { clear: left; margin-bottom: 10px; }
-form.contact label { float: left; margin-right: 10px; text-align: right; width: 200px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+form.contact label { float: left; margin-right: 10px; text-align: right; width: 200px; vertical-align: top; padding-top: 10px; }
 form.contact input[type="text"],
 form.contact input[type="email"]
-    { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
-form.contact textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
-form.contact input[type="submit"] { margin-left: 0px; line-height: 26px; min-height: 26px; }
+    { width: 50%; line-height: 26px; font-size: 20px; min-height: 26px; padding-right: 0px; }
+form.contact textarea { width: 50%; height: 150px; line-height: 26px; font-size: 20px; padding-right: 0px; }
+form.contact input[type="submit"] { margin-left: 0px; line-height: 26px; min-height: 26px; padding-right: 0px; }
 form.contact ul li { color: #ff0000; margin-bottom: 5px; }
 
 input[type="submit"] { margin-left: 0px; line-height: 26px; min-height: 26px; }
 
 #Contact_captcha {
-    width: 350px    !important;
+    width: 250px    !important;
     margin-left:    20px    !important;
 }
 
@@ -57,10 +57,21 @@ input[type="submit"] { margin-left: 0px; line-height: 26px; min-height: 26px; }
 h1#title {
     color: #a70330;
     font-weight: normal;
-    padding-left: 26%;
+    padding-left: 320px;
     padding-bottom: 15px;
+    font-size: 26px;
 }
 
+h4#nav {
+    margin-bottom: 20px;
+    margin-top: 0;
+/*    padding-left: 25px;*/
+}
+
+ul#nav {
+    margin-left: 0px;
+    margin-top: -10px;
+}
 a {
     text-decoration: underline;
 }
@@ -71,5 +82,6 @@ ul {
 }
 
 li {
-    margin-bottom: 15px;
+    margin-bottom:  15px;
+    margin-top:    10px;
 }

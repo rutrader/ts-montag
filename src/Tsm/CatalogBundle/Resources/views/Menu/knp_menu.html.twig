@@ -19,7 +19,7 @@
 
 {% block list %}
 {% if item.hasChildren and options.depth is not sameas(0) and item.displayChildren %}
-    <div class="row-fluid show-grid"{{ _self.attributes(listAttributes) }}>
+<div class="row-fluid show-grid"{{ _self.attributes(listAttributes) }}>
         {{ block('children') }}
     </div>
 {% endif %}
@@ -61,7 +61,7 @@
         {%- set attributes = attributes|merge({'class': classes|join(' ')}) %}
     {%- endif %}
 {# displaying the item #}
-    <span class="span2"{{ _self.attributes(attributes) }}>
+    <span style="padding-right: 20px;"{{ _self.attributes(attributes) }}>
         {%- if item.uri is not empty and (not item.current or options.currentAsLink) %}
         {{ block('linkElement') }}
         {%- else %}
