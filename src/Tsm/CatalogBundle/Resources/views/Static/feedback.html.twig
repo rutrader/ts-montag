@@ -13,14 +13,48 @@
         </div>
     {% endif %}
 
+    <div id="error" class="alert alert-error">
+        {{ form_errors(form.companyname) }}
+        {{ form_errors(form.fullname) }}
+        {{ form_errors(form.phone) }}
+        {{ form_errors(form.email) }}
+        {{ form_errors(form.captcha) }}
+    </div>
     <form action="{{ path('_static_feedback') }}" method="post" {{ form_enctype(form) }} class="contact">
-        {{ form_errors(form) }}
-
+        <div>
+            {{ form_label( form.companyname ) }}
+            {{ form_widget( form.companyname ) }}
+        </div>
+        <div>
+            {{ form_label( form.fullname ) }}
+            {{ form_widget( form.fullname ) }}
+        </div>
+        <div>
+            {{ form_label( form.phone ) }}
+            {{ form_widget( form.phone ) }}
+        </div>
+        <div>
+            {{ form_label( form.email ) }}
+            {{ form_widget( form.email ) }}
+        </div>
+        <div>
+            <label for="service" style="padding-top: 1px;">Выберите интересующие Вас услуги</label>
+            <input type="checkbox" name="service[]" value="Тепловые пункты" /> <span style="font-size: 14px; padding-top: 0px; margin-top: 0px; margin-left: 5px;">Тепловые пункты</span><br />
+            <input type="checkbox" name="service[]" value="Узлы учета тепловой энергии" /><span style="font-size: 14px; margin-left: 10px;">Узлы учета тепловой энергии</span>
+        </div>
+        <div>
+            {{ form_label( form.comment ) }}
+            {{ form_widget( form.comment ) }}
+        </div>
+        <div>
+            {{ form_label( form.captcha ) }}
+            {{ form_widget( form.captcha ) }}
+        </div>
         {{ form_rest(form) }}
 {#        <img src="{{ form.captcha_code }}" title="captcha" width="{{ captcha_width }}" height="{{ captcha_height }}" />#}
         <div>
             <label></label>
-            <input type="submit" value="Отправить"  style="margin-left: 325px;"/>
+            <input type="submit" value="Отправить"  style="margin-left: 275px; padding-left: 0px;"/>
         </div>
     </form>
 </span>

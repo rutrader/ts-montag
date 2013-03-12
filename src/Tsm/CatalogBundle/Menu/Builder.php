@@ -17,7 +17,7 @@ class Builder extends ContainerAware {
 
         $menu->addChild('Home', array('route' => 'main', 'label' => 'Главная'));
         $menu->addChild('about', array( 'route' => '_static_about', 'label' => 'О компании' ) );
-        $menu->addChild('catalog', array( 'route' => 'services', 'label' => 'Услуги' ) );
+        //$menu->addChild('catalog', array( 'route' => 'services', 'label' => 'Услуги' ) );
         $menu->addChild('Partners', array(
             'route' => '_static_partners', 'label' => 'Наши клиенты' ));
         $menu->addChild('contacts', array( 'route' => '_static_contacts', 'label' => 'Контакты' ) );

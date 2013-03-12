@@ -8,6 +8,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\MinLength;
 use Symfony\Component\Validator\Constraints\MaxLength;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Feedback
@@ -197,8 +198,21 @@ class Feedback
         $metadata->addPropertyConstraint( "companyName", new MinLength(1) );
         $metadata->addPropertyConstraint( "companyName", new MaxLength(100) );
 
+        $metadata->addPropertyConstraint( "fullname", new NotBlank( array( 'message' => 'Не заполнено обязательное поле' ) ) );
+        $metadata->addPropertyConstraint( "fullname", new Assert\Regex(array(
+            'pattern' => '/\d/',
+            'match'   => false,
+            'message' => 'Неправильный формат поля',
+        )));
+
         $metadata->addPropertyConstraint("email", new Email( array( 'message' => 'Неправильный формат email' ) ) );
         $metadata->addPropertyConstraint("email", new NotBlank( array( 'message' => 'Не заполнено обязательное поле' ) ) );
         $metadata->addPropertyConstraint("email", new MaxLength( 100 ) );
+
+        $metadata->addPropertyConstraint("phone", new Assert\Regex(array(
+            'pattern' => '/\d/',
+            'match'   => true,
+            'message' => 'Неправильный формат телефона',
+        )));
     }
 }

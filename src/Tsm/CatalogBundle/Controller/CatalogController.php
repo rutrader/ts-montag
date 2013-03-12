@@ -57,11 +57,11 @@ class CatalogController extends Controller
     }
 
     /**
-     * @Route( "/services/list", name="services" )
+     * @ Route( "/services/list", name="services" )
      *
      * @return Response
      * @throws \Exception
-     */
+     *
     public function listAction() {
         $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
 
@@ -73,7 +73,7 @@ class CatalogController extends Controller
         }
         return $this->render( "TsmCatalogBundle:Catalog:list.html.twig", array( "products" => $arReturn ) );
     }
-
+*/
     public function newAction() {
         $oProduct    = new Catalog();
 
