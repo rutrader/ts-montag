@@ -13,14 +13,14 @@
         </div>
     {% endif %}
 
-    <div id="error" class="alert alert-error">
+<div style="margin-bottom: 20px;">
         {{ form_errors(form.companyname) }}
         {{ form_errors(form.fullname) }}
         {{ form_errors(form.phone) }}
         {{ form_errors(form.email) }}
         {{ form_errors(form.captcha) }}
-    </div>
-    <form action="{{ path('_static_feedback') }}" method="post" {{ form_enctype(form) }} class="contact">
+</div>
+        <form action="{{ path('_static_feedback') }}" method="post" {{ form_enctype(form) }} class="contact">
         <div>
             {{ form_label( form.companyname ) }}
             {{ form_widget( form.companyname ) }}

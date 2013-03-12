@@ -202,7 +202,7 @@ class Feedback
         $metadata->addPropertyConstraint( "fullname", new Assert\Regex(array(
             'pattern' => '/\d/',
             'match'   => false,
-            'message' => 'Неправильный формат поля',
+            'message' => 'Неправильный формат поля ФИО',
         )));
 
         $metadata->addPropertyConstraint("email", new Email( array( 'message' => 'Неправильный формат email' ) ) );
