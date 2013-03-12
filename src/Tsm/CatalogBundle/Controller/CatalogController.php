@@ -16,7 +16,6 @@ class CatalogController extends Controller
      */
     public function indexAction()
     {
-        
         $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
 
         if( !$product ) {

@@ -31,7 +31,8 @@
                             <span class="span3" style="margin-left: 5px; border-left-width: 0px;">
                                 <span>Тел: 8(495)915-56-87</span><br />
                                 <br />Москва, 2-й Гончарный пер, д. 6к4, оф.307<br/>
-                                <input type="text" style="margin-top: 30px; width: 200px;"/><input type="submit" value="Поиск" style="margin-top: 18px; height: 32px;">
+                                <form action="{{ path( "search" ) }}" method="POST">
+                                    <input type="text" style="margin-top: 30px; width: 200px;" name="search" /><input type="submit" value="Поиск" style="margin-top: 18px; height: 32px;"></form>
                             </span>
                         </div>
                 </div>

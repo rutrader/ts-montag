@@ -35,13 +35,14 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
-			//Doctrine
-			new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-			//FOS
-	//		new FOS\RestBundle\FOSRestBundle(),
-			//JMS
-//			new JMS\SerializerBundle\JMSSerializerBundle(),
-			new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+            //Doctrine
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            //FOS
+        //  new FOS\RestBundle\FOSRestBundle(),
+            //JMS
+//          new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+      //      new Padam87\SearchBundle\Padam87SearchBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

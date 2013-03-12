@@ -197,7 +197,7 @@ class Feedback
         $metadata->addPropertyConstraint( "companyName", new MinLength(1) );
         $metadata->addPropertyConstraint( "companyName", new MaxLength(100) );
 
-        $metadata->addPropertyConstraint("email", new Email( array( 'message' => 'Некорректный формат email' ) ) );
+        $metadata->addPropertyConstraint("email", new Email( array( 'message' => 'Неправильный формат email' ) ) );
         $metadata->addPropertyConstraint("email", new NotBlank( array( 'message' => 'Не заполнено обязательное поле' ) ) );
         $metadata->addPropertyConstraint("email", new MaxLength( 100 ) );
     }
