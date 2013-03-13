@@ -1,0 +1,13 @@
+{# empty Twig template #}
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/tiny_mce/jquery.tinymce.js') }}"></script>
+
+    {{ form_javascript(form) }}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/sonata.dashboard.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}

@@ -1,5 +1,5 @@
 {
-    "hash": "3a4dc426ea620c185d472f4f94cbad98",
+    "hash": "1b665b5653e4e67df4f3a2c41b6544ae",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -644,12 +644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "304acf0a1af15ebe049231b84a7630c75ecbe62d"
+                "reference": "563fdb953be4f86eeb5b9ab82e82e6a98cf14f6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/304acf0a1af15ebe049231b84a7630c75ecbe62d",
-                "reference": "304acf0a1af15ebe049231b84a7630c75ecbe62d",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/563fdb953be4f86eeb5b9ab82e82e6a98cf14f6b",
+                "reference": "563fdb953be4f86eeb5b9ab82e82e6a98cf14f6b",
                 "shasum": ""
             },
             "require": {
@@ -706,7 +706,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-02-21 18:03:42"
+            "time": "2013-03-12 21:53:10"
         },
         {
             "name": "friendsofsymfony/rest",
@@ -766,28 +766,28 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "990ef344d3c937dd2195babe94a4204559876b2d"
+                "reference": "0766e66f77c3ba41553b3b1d49858915a214134d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/990ef344d3c937dd2195babe94a4204559876b2d",
-                "reference": "990ef344d3c937dd2195babe94a4204559876b2d",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/0766e66f77c3ba41553b3b1d49858915a214134d",
+                "reference": "0766e66f77c3ba41553b3b1d49858915a214134d",
                 "shasum": ""
             },
             "require": {
                 "friendsofsymfony/rest": ">=0.7.0,<0.9.0-dev",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.0,<2.3-dev"
+                "symfony/framework-bundle": ">=2.1,<2.3-dev"
             },
             "conflict": {
                 "jms/serializer-bundle": "<0.11-dev"
             },
             "require-dev": {
                 "jms/serializer-bundle": "0.11.*",
-                "sensio/framework-extra-bundle": ">=2.1,<2.3-dev",
-                "symfony/form": ">=2.1,<2.3-dev",
-                "symfony/security": ">=2.1,<2.3-dev",
-                "symfony/yaml": ">=2.1,<2.3-dev"
+                "sensio/framework-extra-bundle": ">=2.1,<2.4-dev",
+                "symfony/form": ">=2.1,<2.4-dev",
+                "symfony/security": ">=2.1,<2.4-dev",
+                "symfony/yaml": ">=2.1,<2.4-dev"
             },
             "suggest": {
                 "jms/serializer-bundle": "Add support for advanced serialization capabilities, recommended, requires 0.11.*",
@@ -797,7 +797,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.11.x-dev"
+                    "dev-master": "0.12.x-dev"
                 }
             },
             "autoload": {
@@ -829,7 +829,73 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2013-03-05 05:46:40"
+            "time": "2013-03-13 12:27:03"
+        },
+        {
+            "name": "genemu/form-bundle",
+            "version": "dev-master",
+            "target-dir": "Genemu/Bundle/FormBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/genemu/GenemuFormBundle.git",
+                "reference": "v2.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/v2.1.2",
+                "reference": "v2.1.2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": ">=2.1,<2.3-dev",
+                "symfony/framework-bundle": ">=2.1,<2.3-dev"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "1.*",
+                "doctrine/mongodb-odm-bundle": "*",
+                "doctrine/orm": "2.*",
+                "propel/propel-bundle": "*",
+                "symfony/finder": "2.*"
+            },
+            "suggest": {
+                "propel/propel-bundle": "*",
+                "symfony/doctrine-bundle": "1.*",
+                "symfony/finder": "2.*",
+                "symfony/mongodb-odm-bundle": "2.*",
+                "symfony/twig-bridge": "2.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Genemu\\Bundle\\FormBundle": ""
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Chauvel",
+                    "email": "olivier@generation-multiple.com"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/genemu/GenemuFormBundle/contributors"
+                }
+            ],
+            "description": "Extra Form",
+            "keywords": [
+                "extra form",
+                "form"
+            ],
+            "time": "2013-02-21 21:09:51"
         },
         {
             "name": "gregwar/captcha",
@@ -1576,12 +1642,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "8b4266b2c8b6e66101a1a585f9e7a398213a7c78"
+                "reference": "eefc5316ad39dd3e607be231ae2150d85cb2fc83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/8b4266b2c8b6e66101a1a585f9e7a398213a7c78",
-                "reference": "8b4266b2c8b6e66101a1a585f9e7a398213a7c78",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/eefc5316ad39dd3e607be231ae2150d85cb2fc83",
+                "reference": "eefc5316ad39dd3e607be231ae2150d85cb2fc83",
                 "shasum": ""
             },
             "require": {
@@ -1643,7 +1709,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2013-03-10 13:51:33"
+            "time": "2013-03-13 13:57:27"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -2098,12 +2164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "a27f7d8c592530b204f602eba1bf3625d1d33adf"
+                "reference": "175cdc0fd04589d6b7abce8a705537e1366df867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/a27f7d8c592530b204f602eba1bf3625d1d33adf",
-                "reference": "a27f7d8c592530b204f602eba1bf3625d1d33adf",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/175cdc0fd04589d6b7abce8a705537e1366df867",
+                "reference": "175cdc0fd04589d6b7abce8a705537e1366df867",
                 "shasum": ""
             },
             "require": {
@@ -2178,7 +2244,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-03-10 07:25:48"
+            "time": "2013-03-13 13:40:23"
         },
         {
             "name": "twig/extensions",

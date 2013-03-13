@@ -67,4 +67,17 @@ sonata_block:
         sonata.block.service.text:
         sonata.block.service.rss:
 
+sonata_admin:
+    templates:
+        layout:  TsmCatalogBundle::sonata_admin_base_layout.html.twig
+
 gregwar_captcha: ~
+
+genemu_form:
+    tinymce:
+        enabled: true
+        theme:   advanced
+        configs:
+            width:   640
+            height:  300
+        script_url: '/js/tiny_mce/tiny_mce.js'

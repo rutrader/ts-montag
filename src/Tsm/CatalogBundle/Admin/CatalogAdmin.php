@@ -62,7 +62,7 @@ class CatalogAdmin extends Admin {
         $formMapper
                 ->add('name', null, array('label' => 'Название'))
                 ->add('price', null, array('label' => 'Цена'))
-                ->add('descr', null, array('label' => 'Текст'))
+                ->add('descr', 'genemu_tinymce', array('label' => 'Текст') )
 //                ->add( 'category', null, array( 'label' => 'Category' ) )
                 ->add( 'parent', null, array( 'label' => 'Parent' ) )
         //by_reference используется для того чтобы при трансформации данных запроса в объект сущности

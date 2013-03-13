@@ -22,7 +22,8 @@
 		"sonata-project/doctrine-orm-admin-bundle": "2.1.*",
 		"doctrine/doctrine-migrations-bundle": "dev-master",
 		"friendsofsymfony/rest-bundle": "dev-master",
-		"gregwar/captcha-bundle": "dev-master"
+		"gregwar/captcha-bundle": "dev-master",
+		"genemu/form-bundle": "2.1.*"
     },
     "scripts": {
         "post-install-cmd": [

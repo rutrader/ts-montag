@@ -43,6 +43,7 @@ class AppKernel extends Kernel
 //          new JMS\SerializerBundle\JMSSerializerBundle(),
             new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
       //      new Padam87\SearchBundle\Padam87SearchBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
