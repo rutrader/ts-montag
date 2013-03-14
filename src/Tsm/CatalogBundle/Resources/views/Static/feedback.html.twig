@@ -4,7 +4,7 @@
 {% block page_title %}Отправить заявку{% endblock %}
 {% block body %}
 {% include '::navleft.html.twig' %}
-<span class="span8" style="margin-left: 17px;">
+<span class="span8" style="margin-left: 30px;">
     
     {% if app.session.hasFlash('feedback-notice') %}
         <div class="alert alert-success">
@@ -38,9 +38,14 @@
             {{ form_widget( form.email ) }}
         </div>
         <div>
-            <label for="service" style="padding-top: 1px;">Выберите интересующие Вас услуги</label>
-            <input type="checkbox" name="service[]" value="Тепловые пункты" /> <span style="font-size: 14px; padding-top: 0px; margin-top: 0px; margin-left: 5px;">Тепловые пункты</span><br />
-            <input type="checkbox" name="service[]" value="Узлы учета тепловой энергии" /><span style="font-size: 14px; margin-left: 10px;">Узлы учета тепловой энергии</span>
+            <label for="" style="padding-top: 1px;">Интересующие услуги</label>
+            <span style="margin-left: 0px; margin-right: 0px; padding-right: 0px;" class="span3">
+                <input type="checkbox" value="Тепловые пункты" name="service[]" id="warm">
+                <label for="warm" style="float: right; text-align: left; width: auto; margin-right: 50px; padding-top: 3px;">Тепловые пункты</label>
+            </span>
+            <span class="span4" style="margin-left: 0px;">     <input type="checkbox" value="Узлы учета тепловой энергии" name="service[]" id="energy">
+                <label style="float: right; padding-top: 3px; text-align: left; margin-left: 0px; padding-left: 0px; margin-right: 33px;">Узлы учета тепловой энергии</label>
+            </span>
         </div>
         <div>
             {{ form_label( form.comment ) }}
@@ -54,7 +59,7 @@
 {#        <img src="{{ form.captcha_code }}" title="captcha" width="{{ captcha_width }}" height="{{ captcha_height }}" />#}
         <div>
             <label></label>
-            <input type="submit" value="Отправить"  style="margin-left: 275px; padding-left: 0px;"/>
+            <input type="submit" value="Отправить"  style="margin-left: 330px; padding-left: 0px;"/>
         </div>
     </form>
 </span>

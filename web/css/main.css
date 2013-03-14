@@ -32,7 +32,7 @@ body {
 
 form.contact { font-size: 16px; }
 form.contact div { clear: left; margin-bottom: 10px; }
-form.contact label { float: left; margin-right: 10px; text-align: right; width: 200px; vertical-align: top; padding-top: 10px; }
+form.contact label { float: left; margin-right: 10px; text-align: left; width: 200px; vertical-align: top; padding-top: 10px; }
 form.contact input[type="text"],
 form.contact input[type="email"]
     { width: 50%; line-height: 26px; font-size: 20px; min-height: 26px; padding-right: 0px; }
@@ -43,7 +43,7 @@ form.contact ul li { color: #ff0000; margin-bottom: 5px; }
 input[type="submit"] { margin-left: 0px; line-height: 26px; min-height: 26px; }
 
 #Contact_captcha {
-    width: 250px    !important;
+    width: 230px    !important;
     margin-left:    20px    !important;
 }
 
