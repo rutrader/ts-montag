@@ -65,7 +65,7 @@ h1#title {
 h4#nav {
     margin-bottom: 20px;
     margin-top: 0;
-/*    padding-left: 25px;*/
+    font-size: 20px;
 }
 
 ul#nav {
@@ -93,4 +93,8 @@ ul, li div#error {
 li, ul div#error {
     margin-bottom: 0px;
     margin-top: 0px;
+}
+
+img {
+    width: 170px;
 }

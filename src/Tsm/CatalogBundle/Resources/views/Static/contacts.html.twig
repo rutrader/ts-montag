@@ -5,7 +5,16 @@
 {% block body %}
 {% include '::navleft.html.twig' %}
 <span class="span9" style="margin-left: 17px;">
-
+    <h4>Компания "ТеплоСтройМонтаж"</h4>
+    <br />
+    <p>
+        Генеральный директор : Тимофеев Александр Викторович. Тел: 8(903)968-7207
+        <br />
+        Наш Адрес: <address>Москва, 2-ой Гончарный пер., д. 6 , стр. 4</address>
+        Тел. 8(495) 915-56-87
+        <br />
+        Email: <a href="mailto:ts_montag@mail.ru">ts_montag@mail.ru</a>
+    </p>
     <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (начало) -->
 <div id="ymaps-map-id_136260630476185113397" style="width: 600px; height: 444px;"></div>
 <div style="width: 600px; text-align: right;"><a href="http://api.yandex.ru/maps/tools/constructor/index.xml" target="_blank" style="color: #1A3DC1; font: 13px Arial, Helvetica, sans-serif;">Создано с помощью инструментов Яндекс.Карт</a></div>
@@ -30,12 +39,7 @@ function fid_136260630476185113397(ymaps) {
 </script>
 <script type="text/javascript" src="http://api-maps.yandex.ru/2.0-stable/?lang=ru-RU&coordorder=longlat&load=package.full&wizard=constructor&onload=fid_136260630476185113397"></script>
 <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
+    <br />
 </span>
 
-
-    Генеральный директор : Тимофеев Александр Викторович. 8(903)968-7207 ( на страницах где описание работ и если писать телефон по техническим вопросам писать этот номер)
-
-    Наш Адрес: <address>2-ой Гончарный пер., д. 6 , корп. 4, офис 307</address>
-    тел. 8(495) 915-56-87
-    <a href="mailto:ts_montag@mail.ru">ts_montag@mail.ru</a>
 {% endblock %}

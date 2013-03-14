@@ -87,4 +87,21 @@ class StaticPageRestController extends Controller
         return $this->render( 'TsmCatalogBundle:Static:feedback.html.twig', array( 'products' => $this->arSerivces ) );
     }
 
+    /**
+     *
+     */
+    public function billsAction() {
+
+        $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            $this->arSerivces = array();
+        }
+
+        foreach( $product as $key => $val ) {
+            $this->arSerivces[$val->getCategory()->getName()][] = $val;
+        }
+        return $this->render( 'TsmCatalogBundle:Static:bills.html.twig', array( 'products' => $this->arSerivces ) );
+    }
+
 }
