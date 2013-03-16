@@ -39,13 +39,14 @@
         </div>
         <div>
             <label for="" style="padding-top: 1px;">Интересующие услуги</label>
-            <span style="margin-left: 0px; margin-right: 0px; padding-right: 0px;" class="span3">
+            <label for="warm" style="padding-top: 3px;" class="checkbox inline">
                 <input type="checkbox" value="Тепловые пункты" name="service[]" id="warm">
-                <label for="warm" style="float: right; text-align: left; width: auto; margin-right: 50px; padding-top: 3px;">Тепловые пункты</label>
-            </span>
-            <span class="span4" style="margin-left: 0px;">     <input type="checkbox" value="Узлы учета тепловой энергии" name="service[]" id="energy">
-                <label style="float: right; padding-top: 3px; text-align: left; margin-left: 0px; padding-left: 0px; margin-right: 33px;">Узлы учета тепловой энергии</label>
-            </span>
+                Тепловые пункты
+            </label>
+            <label style="padding-top: 3px; margin-left: -55px;" class="checkbox inline">
+                <input type="checkbox" value="Узлы учета тепловой энергии" name="service[]" id="energy">
+                Узлы учета тепловой энергии
+            </label>
         </div>
         <div>
             {{ form_label( form.comment ) }}
