@@ -5,7 +5,8 @@
     {{ parent() }}
     <script type="text/javascript" src="{{ asset('js/tiny_mce/jquery.tinymce.js') }}"></script>
 
-    {{ form_javascript(form) }}
+    {% if form is defined %}{{ form_javascript(form) }}{% endif %}
+    {#{ form_javascript(form) }#}
 {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
