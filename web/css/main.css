@@ -22,8 +22,12 @@ body {
     padding-bottom: 20px;
     margin: 10px auto 0;
     background-color: #FFFFFF;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
     border-radius: 15px;
-#    height: 700px;
+/*    height: 700px; */
 }
 
 .show-grid {
@@ -94,6 +98,10 @@ ul, li div#error {
 li, ul div#error {
     margin-bottom: 0px;
     margin-top: 0px;
+}
+
+#service_list ul {
+    list-style: disc;
 }
 
 img {

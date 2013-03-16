@@ -65,7 +65,7 @@ class FeedbackController extends Controller {
                         ->setSubject( "Ваше обращение в компанию  ООО \"ТеплоСтройМонтаж\" зарегистрировано" )
                         ->setFrom( "ts_montag@mail.ru" )
                         ->setTo( $oData->getEmail() )
-                        ->setBody( $this->renderView( "TsmCatalogBundle::Feedback:feedback_user.html.twig", array( 'feedback' => $oFeedBack ) ) )
+                        ->setBody( $this->renderView( "TsmCatalogBundle:Feedback:feedback_user.html.twig", array( 'feedback' => $oFeedBack ) ) )
                         ;
                 $this->get( 'mailer' )->send( $message );
                 

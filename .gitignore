@@ -17,3 +17,6 @@ web/.htaccess
 web/.htpasswd
 *.htaccess*
 *.htpasswd*
+
+#composer
+composer.lock
