@@ -30,5 +30,11 @@
             <argument>Tsm\CatalogBundle\Entity\Category</argument>
             <argument>SonataAdminBundle:CRUD</argument>
         </service>
+        <service id="tsm.catalog.admin.feedback" class="Tsm\CatalogBundle\Admin\FeedbackAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Feedback" label="Feedback"/>
+            <argument/>
+            <argument>Tsm\CatalogBundle\Entity\Feedback</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
     </services>
 </container>
