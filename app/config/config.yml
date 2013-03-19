@@ -57,6 +57,7 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    delivery_address: ts_montag@mail.ru
 
 sonata_block:
     default_contexts: [cms]

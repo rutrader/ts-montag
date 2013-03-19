@@ -2,5 +2,9 @@
 ФИО контактного лица: {{ feedback.fullname }}
 Телефон:    {{ feedback.phone }}
 Емайл:      {{ feedback.email }}
+Иинтересующие услуги: 
+	{% for item in services %}
+		{{ item }}
+	{% endfor %}
 Вопрос или заявка:
-{{ feedback.comment }}
+{{ feedback.comment|raw }}

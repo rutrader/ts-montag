@@ -34,14 +34,15 @@ class FeedbackController extends Controller {
 
         $form   = $this->createForm( new FeedbackType(), $oFeedBack );
         $request = $this->getRequest();
+		$serivces = array();
 
         if( $request->getMethod() == 'POST' ) {
             $form->bindRequest($request);
 
             if( $form->isValid() ) {
-
                 // Write to DB
                 $oData = $form->getData();
+				$services = $request->get('service');
 
                 $oFeedBack->setCompanyName( $oData->getCompanyName() )
                         ->setFullname( $oData->getFullName() )
@@ -54,9 +55,9 @@ class FeedbackController extends Controller {
                 // Отправляем на admin-email
                 $message = \Swift_Message::newInstance()
                         ->setSubject( "Новое обращение на сайте ts-montag.ru" )
-                        ->setFrom( $oData->getEmail() )
+                        ->setFrom( "admin@ts-montag.ru" )
                         ->setTo( "ts_montag@mail.ru" )
-                        ->setBody( $this->renderView('TsmCatalogBundle:Feedback:feedback.html.twig', array( 'feedback' => $oFeedBack ) ) )
+                        ->setBody( $this->renderView('TsmCatalogBundle:Feedback:feedback.html.twig', array( 'feedback' => $oFeedBack, 'services' => $services ) ) )
                         ;
                 $this->get('mailer')->send($message);
 
@@ -65,7 +66,7 @@ class FeedbackController extends Controller {
                         ->setSubject( "Ваше обращение в компанию  ООО \"ТеплоСтройМонтаж\" зарегистрировано" )
                         ->setFrom( "ts_montag@mail.ru" )
                         ->setTo( $oData->getEmail() )
-                        ->setBody( $this->renderView( "TsmCatalogBundle:Feedback:feedback_user.html.twig", array( 'feedback' => $oFeedBack ) ) )
+                        ->setBody( $this->renderView( "TsmCatalogBundle:Feedback:feedback_user.html.twig", array( 'feedback' => $oFeedBack, 'services' => $services ) ) )
                         ;
                 $this->get( 'mailer' )->send( $message );
                 

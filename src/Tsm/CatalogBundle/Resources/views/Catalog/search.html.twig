@@ -11,7 +11,7 @@
         <span class="span9" style="margin-left: 15px;">
             {% for key, val in results %}
                 <a href={{ path( 'show_product', { 'id' : val.id } ) }}>{{ val.name }}</a><br />
-                <p>{{ val.descr | slice( 0, 100 ) }} <a href={{ path( 'show_product', { 'id' : val.id } ) }}>...</a><br /> </p>
+                <p>{{ val.descr|slice( 0, 50 )|raw }} <a href={{ path( 'show_product', { 'id' : val.id } ) }}>...</a><br /> </p>
                 <span style="padding-top: 10px;"><small>Категория:{{ val.category.name }}</small></span>  <br />
                 <br />
             {% endfor %}
