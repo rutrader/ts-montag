@@ -1,0 +1,30 @@
+{# empty Twig template #}
+{% extends '::base.html.twig' %}
+{% block title %}Нормативные документы{% endblock %}
+{% block page_title %} Нормативные документы {% endblock %}
+{% block body %}
+    {% include '::navleft.html.twig' %} 
+    <span class="span9" style="margin-left: 17px;">
+        <div>
+            <ol style="margin-left: 0px;">
+                <li style="padding-bottom: 5px;">
+                    <a href="{{asset( 'uploads/bills/laws/snip_u5Z132.zip' )}}" target="_blank">СНиП 41-02-2003  Тепловые сети</a>
+                </li>
+                <li style="padding-bottom: 5px;">
+                    <a href="{{asset( 'uploads/bills/laws/_norm_doc_sp_41-101-95.pdf' )}}" target="_blank">СП 41-101-95 Проектирование теплового пункта</a>
+                 </li>
+                <li style="padding-bottom: 5px;">
+                    <a href="{{asset( 'uploads/bills/laws/10696.rar' )}}" target="_blank">СНиП 23-02-2003 Тепловая защита здания</a>
+                </li>
+                <li style="padding-bottom: 5px;">
+                    <a href="{{asset( 'uploads/bills/laws/_norm_doc_snip_41-03-2003.pdf' )}}" target="_blank">СНиП 41-03-2003 Тепловая изоляция оборудования и трубопроводов</a>
+                </li>
+                <li style="padding-bottom: 5px;">
+                    <a href="{{asset( 'uploads/bills/laws/_pdf_Prav_u4_tepl_en.pdf' )}}" target="_blank">«Правила учета тепловой энергии», зарегистрировано в Минюсте РФ 25.09.1995 г. №954</a>
+                <li style="padding-bottom: 5px;">
+                    <a href="{{asset( 'uploads/bills/laws/261FZ.doc' )}}" target="_blank">Федеральный закон Российской Федерации от 23 ноября 2009 г. N 261-ФЗ</a>
+                </li>
+            </ol>
+        </div>
+    </span>
+{% endblock %}

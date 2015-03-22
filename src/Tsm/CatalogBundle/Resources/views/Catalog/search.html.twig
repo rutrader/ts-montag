@@ -1,0 +1,23 @@
+{# empty Twig template #}
+{% extends '::base.html.twig' %}
+{% block body %}
+    {% if app.session.hasFlash('search-warning') %}
+        <div class="alert alert-error">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ app.session.flash('search-warning') }}
+        </div>
+    {% else %}
+        <span class="span3"></span>
+        <span class="span9" style="margin-left: 15px;">
+            {% for key, val in results %}
+                <a href={{ path( 'show_product', { 'id' : val.id } ) }}>{{ val.name }}</a><br />
+                <!-- p>{{ val.descr | raw | slice( 0, 100 ) }} <a href={{ path( 'show_product', { 'id' : val.id } ) }}>...</a><br /> </p -->
+		<p>{{ val.descr|length > 100 ? (val.descr|slice(0,100) ~ '...')|raw : val.descr|raw }} </p>
+                <span style="padding-top: 10px;"><small>Категория:{{ val.category.name }}</small></span>  <br />
+                <br />
+            {% endfor %}
+                <hr />
+                Найдено результатов: {{ results|length}}
+        </span>
+    {% endif %}
+{% endblock %}

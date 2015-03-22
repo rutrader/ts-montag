@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+{% block title %}Список услуг{% endblock %}
+{% block page_title %}Услуги{% endblock %}
+{% block body %}
+{% include '::navleft.html.twig' %}
+<span class="span5">
+        {#% for product in products %}
+    <div class="row-fluid show-grid">
+        <span class="span2" style="word-wrap: break-word; border-radius: 10px;">
+            {{ product.name }}
+        </span>
+        <span class="span5">  
+            {{ product.descr }}
+        </span>
+        <span class="span5">
+            {{ product.category.name | default('NaN') }}
+        </span>
+    </div>
+        {% endfor %#}
+
+</span>
+
+{% endblock %}

@@ -1,7 +1,16 @@
 {% extends '::base.html.twig' %}
+{% block title %}{{ service.name }}{% endblock %}
+{% block page_title %}{{ service.name }}{% endblock %}
 {% block body %}
-    {{ product.name }}
-    {{ product.price }}
-    {{ product.descr }}
-    {{ product.category.name }}
+{% include '::navleft.html.twig' %}
+<span id="service_list" class="span9" style="margin-left: 17px;">
+    {#{ service.name }}
+    {{ service.price }#}
+    {{ service.descr | raw }}
+    {#{ service.category.name }#}
+        <br />
+        {#% if is_granted('ROLE_ADMIN') %}
+            <a id="edit_link" style="float: right;" href="{{ path( 'admin_tsm_catalog_catalog_edit', { 'id' : service.id } ) }}" target="_blank" >Edit</a>
+        {% endif %#}
+</span>
 {% endblock %}

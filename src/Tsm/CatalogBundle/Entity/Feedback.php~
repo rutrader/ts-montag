@@ -1,0 +1,60 @@
+<?php
+
+namespace Tsm\CatalogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Feedback
+ *
+ * @ORM\Table(name="feedback")
+ * @ORM\Entity
+ */
+class Feedback
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="company_name", type="string", length=100, nullable=false)
+     */
+    private $companyName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fullname", type="string", length=512, nullable=false)
+     */
+    private $fullname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="phone", type="string", length=100, nullable=false)
+     */
+    private $phone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=100, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comment", type="string", length=1024, nullable=false)
+     */
+    private $comment;
+
+
+}

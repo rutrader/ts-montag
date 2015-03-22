@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="ru" datatype="plaintext" original="" >
+        <body>
+           <trans-unit id="Catalog List">
+                <source>Catalog List</sourсe>
+                <target>Список услуг</target>
+            </trans-unit>
+           <trans-unit id="Catalog Create">
+                <source>Catalog Create</sourсe>
+                <target>Создание новости</target>
+           </trans-unit>
+           <trans-unit id="Catalog Edit">
+                <source>News Edit</sourсe>
+                <target>Редактирование новости</target>
+           </trans-unit>
+        </body>
+    </file>
+</xliff>

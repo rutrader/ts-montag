@@ -1,0 +1,10 @@
+Название компании: {{ feedback.companyName }}
+ФИО контактного лица: {{ feedback.fullname }}
+Телефон:    {{ feedback.phone }}
+Емайл:      {{ feedback.email }}
+Интересеующие услуги: 
+	{% for item in services %}
+		{{ item }}
+	{% endfor %}
+Вопрос или заявка:
+{{ feedback.comment }}

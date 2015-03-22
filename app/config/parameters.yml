@@ -3,12 +3,12 @@ parameters:
     database_host: localhost
     database_port: null
     database_name: tsm
-    database_user: root
-    database_password: null
+    database_user: tsm
+    database_password: tsmontagmysqlpassword
     mailer_transport: smtp
     mailer_host: localhost
     mailer_user: null
     mailer_password: null
     locale: en
-    secret: 0ffd00a46f335515afa548f8fbf33c4b0a9278b1
+    secret: 5268be2d431846a4e8c44c6ee63f101104
     database_path: null

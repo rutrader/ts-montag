@@ -11,12 +11,23 @@ use Tsm\CatalogBundle\Entity\Catalog;
 class CatalogController extends Controller
 {
     /**
-     * Route("/")
+     * @Route("/", name="main")
      * @Template()
      */
     public function indexAction()
     {
-        return $this->render("TsmCatalogBundle:Catalog:index.html.twig");
+        $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            throw new \Exception( "Nothing..." );
+        }
+        foreach( $product as $key => $val ) {
+            $arReturn[$val->getCategory()->getName()][] = $val;
+        }
+        return $this->render("TsmCatalogBundle:Catalog:index.html.twig", array( 'products' => $arReturn ) );
+         
+         
+        //return $this->forward("TsmCatalogBundle:Catalog:show", array( 'id' => 3 ) );
     }
 
     /**
@@ -26,15 +37,43 @@ class CatalogController extends Controller
      * @throws \Exception
      */
     public function showAction( $id ) {
-        $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->find($id);
+        $service = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->find($id);
 
-        if( !$product ) {
+        if( !$service ) {
             throw new \Exception( "По вашему запросу ничего не найдено" );
         }
 
-        return $this->render( "TsmCatalogBundle:Catalog:show.html.twig", array( "product" => $product ) );
+        $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            $arReturn = false;
+        }
+//var_dump( $product[2]->getCategory()->getName() );
+        foreach( $product as $key => $val ) {
+            $arReturn[$val->getCategory()->getName()][] = $val;
+        }
+
+        return $this->render( "TsmCatalogBundle:Catalog:show.html.twig", array( "service" => $service, "products" => $arReturn ) );
     }
 
+    /**
+     * @ Route( "/services/list", name="services" )
+     *
+     * @return Response
+     * @throws \Exception
+     *
+    public function listAction() {
+        $product = $this->getDoctrine()->getRepository("TsmCatalogBundle:Catalog")->findAll();
+
+        if( !$product ) {
+            throw new \Exception( "Nothing..." );
+        }
+        foreach( $product as $key => $val ) {
+            $arReturn[$val->getCategory()->getName()][] = $val;
+        }
+        return $this->render( "TsmCatalogBundle:Catalog:list.html.twig", array( "products" => $arReturn ) );
+    }
+*/
     public function newAction() {
         $oProduct    = new Catalog();
 

@@ -29,9 +29,9 @@ class CatalogAdmin extends Admin {
         $showMapper
                 ->add('id', null, array('label' => 'Идентификатор'))
                 ->add('name', null, array( 'label' => 'Имя' ) )
-                ->add( 'price', null, array( 'label' => 'Price' ) )
+                ->add( 'price', null, array( 'label' => 'Стоимость' ) )
                 ->add( 'descr', null, array( 'label' => 'Описание' ) )
-                ->add( 'category', null, array( 'label' => 'Категория' ) )
+                //->add( 'category', null, array( 'label' => 'Категория' ) )
                 ;
     }
 
@@ -46,9 +46,9 @@ class CatalogAdmin extends Admin {
         $listMapper
                 ->addIdentifier('id')
                 ->addIdentifier('name', null, array('label' => 'Заголовок'))
-                ->add('price', null, array('label' => 'Дата публикации'))
+                ->add('price', null, array('label' => 'Стоимость'))
                 ->add('descr', null, array('label' => 'Описание'))
-                ->add( 'category', null, array( 'label' => 'Category' ) )
+                //->add( 'category', 'orm_many_to_one' /*array( 'template' => 'SonataDoctrineORMAdminBundle:CRUD:list_orm_many_to_one.html.twig')*/ )
             ;
     }
 
@@ -61,8 +61,8 @@ class CatalogAdmin extends Admin {
     {
         $formMapper
                 ->add('name', null, array('label' => 'Название'))
-                ->add('price', null, array('label' => 'Цена'))
-                ->add('descr', null, array('label' => 'Текст'))
+                ->add('price', null, array('label' => 'Стоимость'))
+                ->add('descr', 'genemu_tinymce', array('label' => 'Текст') )
 //                ->add( 'category', null, array( 'label' => 'Category' ) )
                 ->add( 'parent', null, array( 'label' => 'Parent' ) )
         //by_reference используется для того чтобы при трансформации данных запроса в объект сущности
@@ -76,7 +76,7 @@ class CatalogAdmin extends Admin {
                            'sortable' => 'pos',
                            'inline' => 'table',
                       ))*/
-                ->add('category', 'sonata_type_model', array('label' => 'Категории (Новотека)'))
+                ->add('category', 'sonata_type_model', array('label' => 'Категории'))
                // ->add('newsCategory', null, array('label' => 'Категория'))
                // ->setHelps(array(
                //                 'title' => 'Подсказка по заголовку',

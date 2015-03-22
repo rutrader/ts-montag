@@ -1,0 +1,15 @@
+/* 
+    Document   : main
+    Created on : Mar 7, 2013, 1:22:14 AM
+    Author     : rutrader
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+input[type="text"], input[type="number"], select {
+    width: 640px !important;
+}
+textarea { 
+    width: 640px !important;
+    height: 300px !important
+}

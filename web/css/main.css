@@ -1,0 +1,109 @@
+/* 
+    Document   : main
+    Created on : Mar 7, 2013, 1:22:14 AM
+    Author     : rutrader
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background-color: #bbbbbb;
+}
+
+.logo-name {
+    background-color: #a70330;
+    color: #FFFFFF;
+/*    border-radius: 15px 15px 15px 15px;*/
+    text-align: center;
+}
+#main_container {
+    width: 1250px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 10px auto 0;
+    background-color: #FFFFFF;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    border-radius: 15px;
+/*    height: 700px; */
+}
+
+.show-grid {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+form.contact { font-size: 16px; }
+form.contact div { clear: left; margin-bottom: 10px; }
+form.contact label { float: left; margin-right: 10px; text-align: left; width: 200px; vertical-align: top; padding-top: 10px; }
+form.contact input[type="text"],
+form.contact input[type="email"]
+    { width: 50%; line-height: 26px; font-size: 20px; min-height: 26px; padding-right: 0px; }
+form.contact textarea { width: 50%; height: 150px; line-height: 26px; font-size: 20px; padding-right: 0px; }
+form.contact input[type="submit"] { margin-left: 0px; line-height: 26px; min-height: 26px; padding-right: 0px; }
+form.contact ul li { color: #ff0000; margin-bottom: 5px; }
+
+input[type="submit"] { margin-left: 0px; line-height: 26px; min-height: 26px; }
+
+#Contact_captcha {
+    width: 230px    !important;
+    margin-left:    20px    !important;
+}
+
+#logo {
+    background: url("/img/banner.png") no-repeat scroll 0px center transparent;
+    /*border-radius: 15px 15px 15px 15px;*/
+    height: 120px;
+    background-color: #fff;
+}
+
+h1#title {
+    color: #a70330;
+    font-weight: normal;
+    padding-left: 320px;
+    padding-bottom: 15px;
+    font-size: 26px;
+}
+
+h4#nav {
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+ul#nav {
+    margin-left: 0px;
+    margin-top: -10px;
+}
+a {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom:  15px;
+    margin-top:    10px;
+}
+
+ul, li div#error {
+    margin-bottom: 0px;
+}
+
+li, ul div#error {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#service_list ul {
+    list-style: disc;
+}
+
+#partners img {
+    width: 150px;
+}

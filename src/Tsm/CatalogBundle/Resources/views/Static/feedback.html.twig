@@ -1,0 +1,66 @@
+{# empty Twig template #}
+{% extends '::base.html.twig' %}
+{% block title %}Отправить заявку{% endblock %}
+{% block page_title %}Отправить заявку{% endblock %}
+{% block body %}
+{% include '::navleft.html.twig' %}
+<span class="span8" style="margin-left: 30px;">
+    
+    {% if app.session.hasFlash('feedback-notice') %}
+        <div class="alert alert-success">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ app.session.flash('feedback-notice') }}
+        </div>
+    {% endif %}
+
+<div style="margin-bottom: 20px; color: red;">
+        {{ form_errors(form.companyname) }}
+        {{ form_errors(form.fullname) }}
+        {{ form_errors(form.phone) }}
+        {{ form_errors(form.email) }}
+        {{ form_errors(form.captcha) }}
+</div>
+        <form action="{{ path('_static_feedback') }}" method="post" {{ form_enctype(form) }} class="contact">
+        <div>
+            {{ form_label( form.companyname ) }}
+            {{ form_widget( form.companyname ) }}
+        </div>
+        <div>
+            {{ form_label( form.fullname ) }}
+            {{ form_widget( form.fullname ) }}
+        </div>
+        <div>
+            {{ form_label( form.phone ) }}
+            {{ form_widget( form.phone ) }}
+        </div>
+        <div>
+            {{ form_label( form.email ) }}
+            {{ form_widget( form.email ) }}
+        </div>
+        <div>
+            <label for="" style="padding-top: 1px;">Интересующие услуги</label>
+            <span style="margin-left: 0px; margin-right: 0px; padding-right: 0px;" class="span3">
+                <input type="checkbox" value="Тепловые пункты" name="service[]" id="warm">
+                <label for="warm" style="float: right; text-align: left; width: auto; margin-right: 50px; padding-top: 3px;">Тепловые пункты</label>
+            </span>
+            <span class="span4" style="margin-left: 0px;">     <input type="checkbox" value="Узлы учета тепловой энергии" name="service[]" id="energy">
+                <label style="float: right; padding-top: 3px; text-align: left; margin-left: 0px; padding-left: 0px; margin-right: 33px;">Узлы учета тепловой энергии</label>
+            </span>
+        </div>
+        <div>
+            {{ form_label( form.comment ) }}
+            {{ form_widget( form.comment ) }}
+        </div>
+        <div>
+            {{ form_label( form.captcha ) }}
+            {{ form_widget( form.captcha ) }}
+        </div>
+        {{ form_rest(form) }}
+{#        <img src="{{ form.captcha_code }}" title="captcha" width="{{ captcha_width }}" height="{{ captcha_height }}" />#}
+        <div>
+            <label></label>
+            <input type="submit" value="Отправить"  style="margin-left: 330px; padding-left: 0px;"/>
+        </div>
+    </form>
+</span>
+{% endblock %}
