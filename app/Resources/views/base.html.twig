@@ -72,9 +72,19 @@
                 {% block body %}{% endblock %}
             </div>
         </div>
-		{% block footer %}
-		{% endblock %}
+		
             </div>
+            {% block footer %}
+		<footer>	
+	<div class="container">
+		<div class="row">
+				<p id="footer-copyright">Copyright &copy; {{ 'now' | date('Y') }} All rights reserved <a href="http://ts-montag.ru/" title="ТеплоСтройМонтаж">ТеплоСтройМонтаж</a> </p>				
+<p id="footer-copyright" style="margin: -10px;"><a href="http://ishemgulov.ru">Contact the author</a></p>
+			</div>
+		</div>
+	
+</footer>
+		{% endblock %}
         {% block javascripts %}
             <script type="text/javascript">
                 var _gaq = _gaq || [];

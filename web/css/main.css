@@ -33,6 +33,7 @@ body {
 .show-grid {
     margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 17px;
 }
 
 form.contact { font-size: 16px; }
@@ -76,6 +77,7 @@ h4#nav {
 ul#nav {
     margin-left: 0px;
     margin-top: -10px;
+    font-size: 15px;
 }
 a {
     text-decoration: underline;
@@ -100,10 +102,17 @@ li, ul div#error {
     margin-top: 0px;
 }
 
+li a {
+    font-weight: 600;
+}
+
 #service_list ul {
     list-style: disc;
 }
 
-#partners img {
-    width: 150px;
+footer {
+    border-top: 3px none #eee;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 10px;
 }
